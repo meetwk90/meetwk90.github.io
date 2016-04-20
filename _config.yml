@@ -1,13 +1,13 @@
 # Site
-title:              Oh My Selina!
-bio:                'Walter & Selina'
-description:        "Blog."
+title:              Walter & Selina
+bio:                'A personal plot.'
+description:        "Be simple."
 reading_time:       true
 words_per_minute:   200
 logo:               'assets/img/logo.png'
 background:         'assets/img/placeholder-big.jpg'
 locale:             en_US
-url:                http://taylantatli.me/Moon
+url:                http://ohmyselina.net
 
 # Jekyll
 permalink:          /:title/
