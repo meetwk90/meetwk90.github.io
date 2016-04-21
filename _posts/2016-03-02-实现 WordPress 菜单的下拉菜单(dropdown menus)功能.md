@@ -38,6 +38,7 @@ comments: true
 在 functions.php 文件中添加几行代码，将我们刚刚下载的 CSS 文件包含进 WordPress 中。几乎所有的 WordPress 模板都有 functions.php 这个文件，如果你在你的模板目录下没有发现它，直接创建一个也是可以的。
 
 {% highlight php %}
+<?php
 add_action('wp_enqueue_scripts', 'cssmenumaker_scripts_styles' );
 function cssmenumaker_scripts_styles() {
    wp_enqueue_style( 'cssmenu-styles', get_template_directory_uri() . '/cssmenu/styles.css');
@@ -49,6 +50,7 @@ function cssmenumaker_scripts_styles() {
 添加这个 Class 会使我们的 CSS 代码在模板中运行。
 
 {% highlight php %}
+<?php
 class CSS_Menu_Maker_Walker extends Walker {
 
   var $db_fields = array( 'parent' => 'menu_item_parent', 'id' => 'db_id' );
