@@ -7,7 +7,7 @@ tag:
 - ubuntu
 - swap
 - Walter
-- VPS
+- VPS   
 comments: true
 ---
 
@@ -22,14 +22,14 @@ Google之后得知有许多人跟我有同样的困扰，也大多是 WordPress 
 在我们开始分区之前，我们需要查看系统是否已经有了 Swap 分区，是否有足够空间分给 Swap。我们可以分出一个或几个 Swap 分区来，但实际上大多数情况下一个 Swap 就足够了。
 
 我们通过这种方式来查看 Swap 分区情况：
-<pre>sudo swapon -s</pre>
+<code>sudo swapon -s</code>
 
 >Filename&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Type&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Size&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Used&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Priority
 
 如果你得到的像以上显示的那样的空表，那么你的系统中是没有建立Swap分区的。
 
 另一种查看的方法是使用<code>free</code>命令，<code>free</code>是用来查看系统内存使用的，我们通过以下命令来查看：
-<pre>free -m</pre>
+<code>free -m</code>
 
 <pre>
              total       used       free     shared    buffers     cached
@@ -41,7 +41,7 @@ Swap:            0         0          0
 #### 查看硬盘空间大小 ####
 
 输入：
-<pre>df -h</pre>
+<code>df -h</code>
 
 <pre>
 Filesystem      Size  Used Avail Use% Mounted on
@@ -60,12 +60,12 @@ none            100M     0  100M   0% /run/user
 
 我们将在根目录(/)下创建一个叫做<code>swapfile</code>的文件。我们通过使用<code>fallocate</code>程序创建它。
 
-<pre>sudo fallocate -l 4G /swapfile</pre>
+<code>sudo fallocate -l 4G /swapfile</code>
 
 这条命令立马生效，我们可以通过输入下面这行命令来确认：
-<pre>ls -lh /swapfile</pre>
+<code>ls -lh /swapfile</code>
 
-<pre>-rw-r--r-- 1 root root 4.0G Apr 28 17:19 /swapfile</pre>
+<code>-rw-r--r-- 1 root root 4.0G Apr 28 17:19 /swapfile</code>
 
 好了，我们已经得到了我们想要的Swap文件。
 
@@ -75,17 +75,17 @@ none            100M     0  100M   0% /run/user
 
 在这之前，我们需要调整文件权限来加固安全性能。
 
-<pre>sudo chmod 600 /swapfile</pre>
+<code>sudo chmod 600 /swapfile</code>
 
 验证：
 
-<pre>ls -lh /swapfile</pre>
+<code>ls -lh /swapfile</code>
 
 <pre>-rw------- 1 root root 4.0G Apr 28 17:19 /swapfile</pre>
 
-好了，现在它变得更安全啦。下面我们让系统来创建Swap分区：
+好了，现在它变得更安全啦。下面我们让系统来创建 Swap 分区：
 
-<pre>sudo mkswap /swapfile</pre>
+<code>sudo mkswap /swapfile</code>
 
 <pre>
 Setting up swapspace version 1, size = 4194300 KiB
@@ -94,18 +94,18 @@ no label, UUID=e2f1e9cf-c0a9-4ed4-b8ab-714b8a7d6944
 
 激活：
 
-<pre>sudo swapon /swapfile</pre>
+<code>sudo swapon /swapfile</code>
 
 验证：
 
-<pre>sudo swapon -s</pre>
+<code>sudo swapon -s</code>
 
 <pre>
 Filename                Type        Size    Used    Priority
 /swapfile               file        4194300 0       -1
 </pre>
 
-<pre>free -m</pre>
+<code>free -m</code>
 
 <pre>
              total       used       free     shared    buffers     cached
@@ -122,7 +122,7 @@ Swap:         4095          0       4095
 
 编辑<code>fstab</code>：
 
-<pre>sudo nano /etc/fstab</pre>
+<code>sudo nano /etc/fstab</code>
 
 在文档的最后，我们新增一行：
 
