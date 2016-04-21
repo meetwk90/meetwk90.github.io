@@ -19,9 +19,9 @@ PDF格式是目前广泛使用的文档格式。如果你的网站需要提供�
 Zend_PDF 同时允许生成新PDF文件或导入已存在的PDF文件。更好的选择是，我们先手动创建一个PDF模版，包括了必要的信息，然后我们可以通过Zend_PDF和我们自己编写的代码来导入这个模板并更新它。
 
 下图所示为我们演示使用的PDF模版。
-<img src="http://198.199.116.214/wp-content/uploads/2016/02/template.png" alt="template" width="465" height="581" class="aligncenter size-full wp-image-422" />
+<img src="http://198.199.116.214/wp-content/uploads/2016/02/template.png" alt="template" />
 
-如果这是你第一次使用Zend框架，到Zend官方网站 www.zendframework.com 下载最新版并解压到你的服务器。然后在你的代码头写上以下代码来配置 autoloader。
+如果这是你第一次使用Zend框架，到Zend官方网站 [www.zendframework.com](www.zendframework.com) 下载最新版并解压到你的服务器。然后在你的代码头写上以下代码来配置 autoloader。
 
 {% highlight php %}
 <?php

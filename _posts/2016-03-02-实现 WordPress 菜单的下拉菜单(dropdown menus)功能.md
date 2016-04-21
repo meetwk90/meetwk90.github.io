@@ -17,11 +17,11 @@ comments: true
 
 ### Demo ###
 
-<a href="http://198.199.116.214/wp-content/uploads/2016/03/demo-1.png" rel="attachment wp-att-465"><img src="http://198.199.116.214/wp-content/uploads/2016/03/demo-1.png" alt="demo" width="755" height="400" class="aligncenter size-full wp-image-465" /></a>
+<img src="http://198.199.116.214/wp-content/uploads/2016/03/demo-1.png" alt="demo" />
 
 ### Step 1: 下载 CSS 源码 ###
 
-下载地址： <a href="http://198.199.116.214/wp-content/uploads/2016/03/source.zip"rel="">Download Source</a>
+下载地址： <a href="http://198.199.116.214/wp-content/uploads/2016/03/source.zip">Download Source</a>
 
 ### Step 2: 上传文件 ###
 
@@ -31,7 +31,7 @@ comments: true
 
 在 外观 > 菜单 中新建并保存自定义的菜单。注意你的菜单名称，下一步中我们会用到它（我的是Main Navigation）。
 
-<a href="http://198.199.116.214/wp-content/uploads/2016/03/wordpress_3_drop_down_menu_tutorial.png" rel="attachment wp-att-451"><img src="http://198.199.116.214/wp-content/uploads/2016/03/wordpress_3_drop_down_menu_tutorial.png" alt="wordpress_3_drop_down_menu_tutorial" width="907" height="463" class="aligncenter size-full wp-image-451" /></a>
+<img src="http://198.199.116.214/wp-content/uploads/2016/03/wordpress_3_drop_down_menu_tutorial.png" alt="wordpress_3_drop_down_menu_tutorial"  />
 
 ### Step 4: 导入 CSS Styles ###
 
