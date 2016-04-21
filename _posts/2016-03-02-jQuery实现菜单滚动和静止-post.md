@@ -3,7 +3,7 @@ layout: post
 title: "jQuery 实现菜单跟随鼠标滚动/静止"
 date: 2016-03-02
 excerpt: "废话不多说，上代码。"
-tag：
+tag:
 - jQuery
 - Code
 comments: true
