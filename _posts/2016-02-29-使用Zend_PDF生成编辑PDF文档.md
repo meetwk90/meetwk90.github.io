@@ -6,8 +6,9 @@ excerpt: "PDF格式是目前广泛使用的文档格式。如果你的网站需�
 tag:
 - Zend
 - PHP
-- Code
+- code
 - PDF
+- Walter
 comments: true
 ---
 
@@ -18,7 +19,7 @@ PDF格式是目前广泛使用的文档格式。如果你的网站需要提供�
 Zend_PDF 同时允许生成新PDF文件或导入已存在的PDF文件。更好的选择是，我们先手动创建一个PDF模版，包括了必要的信息，然后我们可以通过Zend_PDF和我们自己编写的代码来导入这个模板并更新它。
 
 下图所示为我们演示使用的PDF模版。
-<img src="http://ohmyselina.net/wp-content/uploads/2016/02/template.png" alt="template" width="465" height="581" class="aligncenter size-full wp-image-422" />
+<img src="http://198.199.116.214/wp-content/uploads/2016/02/template.png" alt="template" width="465" height="581" class="aligncenter size-full wp-image-422" />
 
 如果这是你第一次使用Zend框架，到Zend官方网站 www.zendframework.com 下载最新版并解压到你的服务器。然后在你的代码头写上以下代码来配置 autoloader。
 
@@ -98,7 +99,7 @@ $page->setFillColor($color);
 
 在页面上编辑内容使用了 Zend_Pdf_Page 的 drawText() 实例方法。一个X轴，Y轴的坐标集合能够帮助你定位你将要添加内容的位置。坐标轴的定义了页面的左下角为起始点（0, 0）。X轴指向右边，Y轴指向上边。
 
-<img src="http://ohmyselina.net/wp-content/uploads/2016/02/page-x-y.png" alt="page-x-y" width="200" height="235" class="aligncenter size-full wp-image-432" />
+<img src="http://198.199.116.214/wp-content/uploads/2016/02/page-x-y.png" alt="page-x-y" width="200" height="235" class="aligncenter size-full wp-image-432" />
 
 在实际应用中你需要按照比例尺计算页面的X轴Y轴坐标，但在这个例子中我将使用以下数据。
 
