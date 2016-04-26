@@ -14,13 +14,13 @@ comments: true
 
 <code>sudo crontab -e</code> 编辑 crontab 脚本。
 
-{% highlight %}
+<code>
 ## Auto-restart PHP when it's returning errors
 #
 # Make sure that http://localhost/test.php is an actual PHP script. If it starts returning
 # 500 errors, restart the PHP-FPM service
 *   *   *   *   *    /usr/bin/curl --head -sf http://localhost/test.php -o /dev/null || (/usr/sbin/service php5-fpm restart && /usr/sbin/service nginx restart)
-{% endhighlight %}
+</code>
 
 加入以上代码，保存退出。
 
