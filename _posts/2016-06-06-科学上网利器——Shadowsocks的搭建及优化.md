@@ -10,7 +10,7 @@ tag:
 - VPN
 ---
 
-## Shadowsocks 的原理 ##
+# Shadowsocks 的原理 #
 
 简单理解的话，Shadowsocks 是将以前通过 SSH 创建的 Socks5 协议拆开成 Server 端和 Client 端。
 
@@ -25,37 +25,37 @@ tag:
 
 缺点也依然明显，需要一点点技术和资源（墙外 VPS 服务器）来搭建 Shadowsocks 服务。
 
-## Shadowsocks 的搭建 ##
+# Shadowsocks 的搭建 #
 
 首先，我假定你已经拥有了自己的 VPS（要在国外或香港的）。如果你没有，go back to [DigitalOcean + Ubuntu+ WordPress 个人建站全记录](/DigitalOcean-+-Ubuntu+-WordPress-个人建站全记录/) and get one!
 
 以下是 Shadowsocks 搭建步骤。
 
-### 服务端 ###
+## 服务端 ##
 
-#### 安装 ####
+### 安装 ###
 
-##### Dibian / Ubuntu: #####
+#### Dibian / Ubuntu: ####
 
 <code>
 sudo apt-get install python-pip
 pip install shadowsocks
 </code>
 
-##### CentOS: #####
+#### CentOS: ####
 
 <code>
 yum install python-setuptools && easy_install pip
 pip install shadowsocks
 </code>
 
-##### Windows: #####
+#### Windows: ####
 
 不建议使用 Windows 服务器。
 
-#### 使用 ####
+### 使用 ###
 
-##### 方法 1 #####
+#### 方法 1 ####
 
 运行 Shadowsocks 服务端：
 
@@ -75,7 +75,7 @@ pip install shadowsocks
 
 用<code>-h</code>查看所有参数。
 
-##### 方法 2 #####
+#### 方法 2 ####
 
 或者你可以使用配置文件（Config File）进行配置。
 
@@ -155,11 +155,11 @@ Example:
 
 <code>ssserver -c /etc/shadowsocks.json -d stop</code>
 
-### 客户端 ###
+## 客户端 ##
 
-#### Windows ####
+### Windows ###
 
-##### 功能 #####
+#### 功能 ####
 
 1. 系统代理设置
 2. PAC 模式和全局模式
@@ -168,58 +168,58 @@ Example:
 5. 支持多服务器切换
 6. 支持 UDP 代理
 
-##### 下载 #####
+#### 下载 ####
 
 [3.0版本下载](http://o8c8x14zj.bkt.clouddn.com/Shadowsocks-3.0.zip)
 
-##### 基本使用 #####
+#### 基本使用 ####
 
 1. 在任务栏找到 Shadowsocks 图标
 2. 在<code>服务器</code>菜单添加自己的服务器
 3. 选择<code>启用系统代理</code>来启用。请禁用浏览器里的代理插件，或把它们设置为使用系统代理。
 4. 除了设为系统代理，你也可以直接自己配置浏览器代理。在 SwitchOmega 中把代理设置为 SOCKS5 或 HTTP 的 127.0.0.1：1080。这个1080端口可以在服务器设置中设置。
 
-##### PAC #####
+#### PAC ####
 
 1. 可以编辑 PAC 文件来修改 PAC 设置。Shadowsocks 会监听文件变化，修改后会自动生效。
 2. 你也可以从 [GFWList](https://github.com/gfwlist/gfwlist) (由第三方维护)更新 PAC 文件。
 3. 你也可以使用在线 PAC URL。
 
-##### 服务器自动切换 #####
+#### 服务器自动切换 ####
 
 1. 负载均衡：随机选择已添加的服务器
 2. 高可用：根据延迟和丢包率自动选择已添加的服务器
 3. 累计丢包率：通过定时 ping 来测速和选择。如果要使用本功能，请打开菜单里的<code>统计可用性</code>。
 
-#### OS X ####
+### OS X ###
 
 OS X 10.8+ 可用。
 
-##### 下载 #####
+#### 下载 ####
 
 [2.6.3版本下载](http://o8c8x14zj.bkt.clouddn.com/ShadowsocksX-2.6.3.dmg)
 
-##### 基本使用 #####
+#### 基本使用 ####
 
 基本等同 Windows 版。
 
-#### Android ####
+### Android ###
 
-##### 下载 #####
+#### 下载 ####
 
 [2.9.10版本 apk 下载](http://o8c8x14zj.bkt.clouddn.com/shadowsocks-nightly-2.9.10.apk)
 
 [Google Play](https://play.google.com/store/apps/details?id=com.github.shadowsocks)
 
-#### iOS ####
+### iOS ###
 
 iOS 系统由于种种限制，不越狱使用的话目前只能实现通过 Web 浏览器的方式翻墙，Gloable 模式限制过多，不推荐使用。
 
-##### 下载 #####
+#### 下载 ####
 
 [App Store](https://itunes.apple.com/us/app/shadowsocks/id665729974?ls=1&mt=8)
 
-## 优化 shadowsocks ##
+# 优化 shadowsocks #
 
 如果你在自己的日志中经常发现<code>error: too many open files</code>，下面的优化配置也许能帮上忙。
 
@@ -227,8 +227,7 @@ Dibian 7 / Ubuntu：
 
 创建<code>/etc/sysctl.d/local.conf</code>并写入以下代码：
 
-<pre>
-# max open files
+># max open files
 fs.file-max = 51200
 # max read buffer
 net.core.rmem_max = 67108864
@@ -243,7 +242,7 @@ net.core.netdev_max_backlog = 4096
 # max backlog
 net.core.somaxconn = 4096
 
-# resist SYN flood attacks
+># resist SYN flood attacks
 net.ipv4.tcp_syncookies = 1
 # reuse timewait sockets when safe
 net.ipv4.tcp_tw_reuse = 1
@@ -268,12 +267,11 @@ net.ipv4.tcp_wmem = 4096 65536 67108864
 # turn on path MTU discovery
 net.ipv4.tcp_mtu_probing = 1
 
-# for high-latency network
+># for high-latency network
 net.ipv4.tcp_congestion_control = hybla
 
-# for low-latency network, use cubic instead
+># for low-latency network, use cubic instead
 # net.ipv4.tcp_congestion_control = cubic
-</pre>
 
 然后:
 
