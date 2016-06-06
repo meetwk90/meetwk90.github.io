@@ -227,7 +227,7 @@ Dibian 7 / Ubuntu：
 
 创建<code>/etc/sysctl.d/local.conf</code>并写入以下代码：
 
-{% highlight %}
+<pre>
 # max open files
 fs.file-max = 51200
 # max read buffer
@@ -273,7 +273,7 @@ net.ipv4.tcp_congestion_control = hybla
 
 # for low-latency network, use cubic instead
 # net.ipv4.tcp_congestion_control = cubic
-{% endhighlight %}
+</pre>
 
 然后:
 
