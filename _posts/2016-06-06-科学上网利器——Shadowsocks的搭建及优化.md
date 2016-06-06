@@ -281,4 +281,4 @@ Warning: 不要打开<code>net.ipv4.tcp_tw_recycle</code>!!!
 
 如果你使用了 [Supervisor](https://github.com/shadowsocks/shadowsocks/wiki/%E7%94%A8-Supervisor-%E8%BF%90%E8%A1%8C-Shadowsocks) (从 Shadowsocks 2.6版本开始，你可以直接在后台运行 Shadowsocks，无需 Supervisor)，确保<code>ulimit -n 51200</code>已写入<code>/etc/default/supervisor</code>。一旦写入后，重启 Supervisor (<code>service stop supervisor && service start supervisor</code>)。
 
-> 部分内容节选、翻译自 https://github.com/shadowsocks
+> 部分内容节选、翻译自 [https://github.com/shadowsocks](https://github.com/shadowsocks)
