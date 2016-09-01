@@ -23,11 +23,11 @@ Sublime Text 具有漂亮的用户界面和强大的功能，例如代码缩略�
 
 1. 通过 ctrl+shift+p 组合键打开命令面板
 2. 输入 install package 后回车
-<img src="http://198.199.116.214/wp-content/uploads/2016/01/20150415112106176.jpg" alt="20150415112106176" />
+<img src="http://o8c8x14zj.bkt.clouddn.com/20150415112106176.jpg" alt="20150415112106176" />
 Sublime Text 通过 install packge 安装插件
 
 3. 输入 DeleteBlankLines 后回车进行安装
-<img src="http://198.199.116.214/wp-content/uploads/2016/01/20150415112106497.jpg" alt="20150415112106497" />
+<img src="http://o8c8x14zj.bkt.clouddn.com/20150415112106497.jpg" alt="20150415112106497" />
 Sublime Text 去除空白行插件 DeleteBlankLines
 
 上文所述安装 DeleteBlankLines 插件的前提：Package Control 已经安装好。

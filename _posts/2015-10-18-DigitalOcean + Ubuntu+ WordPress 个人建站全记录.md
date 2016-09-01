@@ -23,33 +23,33 @@ comments: true
 
 之后我们就开始正式开始建站的部分啦。点击网站右上角，开始建立你的第一个“小水滴”。
 
-<img src="http://198.199.116.214/wp-content/uploads/2015/10/Create-Droplet.png" alt="Create Droplet" />
+<img src="http://o8c8x14zj.bkt.clouddn.com/Create-Droplet.png" alt="Create Droplet" />
 
 键入主机名称
 
-<img src="http://198.199.116.214/wp-content/uploads/2015/10/Droplet-Hostname.png" alt="Droplet Hostname" />
+<img src="http://o8c8x14zj.bkt.clouddn.com/Droplet-Hostname.png" alt="Droplet Hostname" />
 
 依个人需求选择包月套餐
 
-<img src="http://198.199.116.214/wp-content/uploads/2015/10/Select-Size.png" alt="Select Size" />
+<img src="http://o8c8x14zj.bkt.clouddn.com/Select-Size.png" alt="Select Size" />
 
 选择机房的 location，你可以到<a href="http://speedtest-sfo1.digitalocean.com/" target="_blank">http://speedtest-sfo1.digitalocean.com/</a> 测试速度，选择最快最稳定的那个接入点。一般建议选择三藩市。
 
-<img src="http://198.199.116.214/wp-content/uploads/2015/10/Select-Region.png" alt="Select Region" />
+<img src="http://o8c8x14zj.bkt.clouddn.com/Select-Region.png" alt="Select Region" />
 
 选择 Ubuntu 作为我们的操作系统
 
-<img src="http://198.199.116.214/wp-content/uploads/2015/10/Select-Image.png" alt="Select Image" />
+<img src="http://o8c8x14zj.bkt.clouddn.com/Select-Image.png" alt="Select Image" />
 
 旁边的 Applications 选项卡下可以选择 WordPress on 14.04 作为已经配置好的 WP 环境，需要至少30GB的磁盘空间，不过我没有选择过这个，大家可以试试看。
 
 下面的 Available Settings 及 SSH Keys 属于可选项目，如果大家有兴趣可以研究下。特别是 SSH，可以让你的主机更安全。在此按下不表，毕竟我要做的是一个临时项目，我就不麻烦自己啦：）
 
-都选择完毕后点击<img src="http://198.199.116.214/wp-content/uploads/2015/10/Create-Droplet_2.png" alt="Create Droplet_2" />
+都选择完毕后点击<img src="http://o8c8x14zj.bkt.clouddn.com/Create-Droplet_2.png" alt="Create Droplet_2" />
 
 DO 的效率非常高，大概等待几分钟，就提示建立完成啦。
 
-<img src="http://198.199.116.214/wp-content/uploads/2015/10/Chrysler.png" alt="Chrysler" />
+<img src="http://o8c8x14zj.bkt.clouddn.com/Chrysler.png" alt="Chrysler" />
 
 在这个界面可以看到主机的基本信息，包括 IP 地址，Console 接入，和重置密码等。
 
@@ -59,7 +59,7 @@ DO 的效率非常高，大概等待几分钟，就提示建立完成啦。
 
 安装完成后输入登陆账号（root），IP 地址，端口号等信息
 
-<img src="http://198.199.116.214/wp-content/uploads/2015/10/Putty.png" alt="Putty" />
+<img src="http://o8c8x14zj.bkt.clouddn.com/Putty.png" alt="Putty" />
 
 第一次登陆需要修改你等密码。
 
@@ -81,7 +81,7 @@ DO 的效率非常高，大概等待几分钟，就提示建立完成啦。
 
 浏览器中输入你的主机IP地址，如果 apache 启动成功会显示"It works!"。
 
-<img src="http://198.199.116.214/wp-content/uploads/2015/10/Apache.png" alt="Apache" />
+<img src="http://o8c8x14zj.bkt.clouddn.com/Apache.png" alt="Apache" />
 
 验证 MySQL:
 
@@ -103,9 +103,9 @@ DO 的效率非常高，大概等待几分钟，就提示建立完成啦。
 
 这样我们就可以在浏览器里访问 phpmyadmin 了。
 
-<a href="http://198.199.116.214/wp-content/uploads/2015/10/phpmyadmin.png"><img src="http://198.199.116.214/wp-content/uploads/2015/10/phpmyadmin.png" alt="phpmyadmin" /></a>
+<img src="http://o8c8x14zj.bkt.clouddn.com/phpmyadmin.png" alt="phpmyadmin" />
 
-登陆之后创建 wordpress 数据库： <a href="http://198.199.116.214/wp-content/uploads/2015/10/mysql.png"><img src="http://198.199.116.214/wp-content/uploads/2015/10/mysql.png" alt="mysql" /></a>
+登陆之后创建 wordpress 数据库： <img src="http://o8c8x14zj.bkt.clouddn.com/mysql.png" alt="mysql" />
 
 以上步骤完成后，WordPress 所必需的环境就配置好了。下面我们开始安装 WordPress。
 
@@ -122,7 +122,7 @@ DO 的效率非常高，大概等待几分钟，就提示建立完成啦。
 
 现在再尝试访问一下你的IP地址，安装程序应该就可以开始了。
 
-<a href="http://198.199.116.214/wp-content/uploads/2015/10/WordPress-Setup.png"><img src="http://ohmyselina.net/wp-content/uploads/2015/10/WordPress-Setup.png" alt="WordPress-Setup" /></a>
+<img src="http://o8c8x14zj.bkt.clouddn.com/WordPress-Setup.png" alt="WordPress-Setup" />
 
 如果发现输入IP之后还是显示 Apache 的页面，需要把 /var/www/html 下的 index.html 手动删除：
 
@@ -132,7 +132,7 @@ DO 的效率非常高，大概等待几分钟，就提示建立完成啦。
 
 再到下一步可能会得到一个没有权限写入的提示：
 
-<a href="http://198.199.116.214/wp-content/uploads/2015/10/Deny.png"><img src="http://ohmyselina.net/wp-content/uploads/2015/10/Deny.png" alt="Deny" /></a>
+<img src="http://o8c8x14zj.bkt.clouddn.com/Deny.png" alt="Deny" />
 
 更改权限：
 
@@ -142,19 +142,19 @@ DO 的效率非常高，大概等待几分钟，就提示建立完成啦。
 
 继续下去：
 
-<a href="http://198.199.116.214/wp-content/uploads/2015/10/Welcome.png"><img src="http://ohmyselina.net/wp-content/uploads/2015/10/Welcome.png" alt="Welcome" /></a>
+<img src="http://o8c8x14zj.bkt.clouddn.com/Welcome.png" alt="Welcome" />
 
-<a href="http://198.199.116.214/wp-content/uploads/2015/10/Success.png"><img src="http://ohmyselina.net/wp-content/uploads/2015/10/Success.png" alt="Success" /></a>
+<img src="http://o8c8x14zj.bkt.clouddn.com/Success.png" alt="Success" />
 
 成功啦！
 
 点击登陆进入仪表盘 Dashboard。刚安装完成就发现更新需求了-_-|||
 
-<a href="http://198.199.116.214/wp-content/uploads/2015/10/Update.png"><img src="http://ohmyselina.net/wp-content/uploads/2015/10/Update.png" alt="Update" /></a>
+<img src="http://o8c8x14zj.bkt.clouddn.com/Update.png" alt="Update" />
 
 在升级插件的时候，出现了这种情况：
 
-<a href="http://198.199.116.214/wp-content/uploads/2015/10/Plugin.png"><img src="http://ohmyselina.net/wp-content/uploads/2015/10/Plugin.png" alt="Plugin" /></a>
+<img src="http://o8c8x14zj.bkt.clouddn.com/Plugin.png" alt="Plugin" />
 
 我们需要通过修改 /var/www/html 下的 wp-config.php 的方法来解决。在脚本文件的最后添加以下代码：
 

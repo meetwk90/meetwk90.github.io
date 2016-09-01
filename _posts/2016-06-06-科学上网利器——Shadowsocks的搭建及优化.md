@@ -38,17 +38,15 @@ comments: true
 
 #### Dibian / Ubuntu: ####
 
-<code>
-sudo apt-get install python-pip
-pip install shadowsocks
-</code>
+<code>sudo apt-get install python-pip</code>
+
+<code>pip install shadowsocks</code>
 
 #### CentOS: ####
 
-<code>
-yum install python-setuptools && easy_install pip
-pip install shadowsocks
-</code>
+<code>yum install python-setuptools && easy_install pip</code>
+
+<code>pip install shadowsocks</code>
 
 #### Windows: ####
 
