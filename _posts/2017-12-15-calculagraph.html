@@ -94,18 +94,18 @@ project: true
         
             var startDate = new Date(start).getTime(), now = new Date().getTime(), distance = now - startDate;
         
-            var days = "<span class='" + className + "'>" + Math.floor(distance / (1000 * 60 * 60 * 24)) + "</span>"
-            var hours = "<span class='" + className + "'>" + Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) + "</span>"
-            var minutes = "<span class='" + className + "'>" + Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)) + "</span>"
-            var seconds = "<span class='" + className + "'>" + Math.floor((distance % (1000 * 60)) / 1000) + "</span>"
+            var days = "<span class='" + className + "'>" + Math.floor(distance / (1000 * 60 * 60 * 24)) + "</span>";
+            var hours = "<span class='" + className + "'>" + Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) + "</span>";
+            var minutes = "<span class='" + className + "'>" + Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)) + "</span>";
+            var seconds = "<span class='" + className + "'>" + Math.floor((distance % (1000 * 60)) / 1000) + "</span>";
         
-            return result = days + "<span class='days'>days </span>" + hours + "<span class='hours'>hours </span>" + minutes + "<span class='minutes'>minutes </span>" + seconds + "<span class='seconds'>seconds</span>"
+            return result = days + "<span class='days'>days </span>" + hours + "<span class='hours'>hours </span>" + minutes + "<span class='minutes'>minutes </span>" + seconds + "<span class='seconds'>seconds</span>";
 
         }
         
         setInterval(function() {
-            document.getElementById("date-since-met").innerHTML = countDate("2015-06-15", "number")
-        }, 1000)
+            document.getElementById("date-since-met").innerHTML = countDate("2015-06-15", "number");
+        }, 1000);
             
     </script>
 </body>
