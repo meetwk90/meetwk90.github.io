@@ -92,8 +92,7 @@ project: true
     <script>
         function countDate(start, className) {
         
-            var startDate = new Date(start).getTime(), now = new Date().getTime()
-            var distance = now - startDate
+            var startDate = new Date(start).getTime(), now = new Date().getTime(), distance = now - startDate
         
             var days = "<span class='" + className + "'>" + Math.floor(distance / (1000 * 60 * 60 * 24)) + "</span>"
             var hours = "<span class='" + className + "'>" + Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) + "</span>"
