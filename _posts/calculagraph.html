@@ -1,0 +1,114 @@
+---
+layout: compress
+title: "Calculagraph"
+date: 2017-12-15
+tag:
+- Walter
+- Calculagraph
+excerpt: "How long since we were met..."
+project: true
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculagraph</title>
+    <style>
+        body {
+            background-image: url("winter.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 26px;
+            color: white;
+        }
+
+        #center-box {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* padding: 0px 80px;
+            border: 1px solid white; */
+        } 
+
+        #left {
+            position: relative;
+            left: -60px;
+            font-style: oblique;
+            opacity: 0;
+            animation: fadein 5s;
+            animation-delay: 1s;
+            animation-fill-mode: forwards;
+        }
+
+        #right {
+            position: relative;
+            text-align: right;
+            right: -60px;
+            font-style: oblique;
+            opacity: 0;
+            animation: fadein 5s;
+            animation-delay: 5s;
+            animation-fill-mode: forwards;
+        }
+
+        #date-since-met {
+            padding: 20px;
+            opacity: 0;
+            animation: fadein 5s;
+            animation-delay: 3s;
+            animation-fill-mode: forwards;
+            border: solid 2px white;
+        }
+
+        .number {
+            font-size: 200%;
+            font-weight: bold;
+            color: goldenrod;
+            margin-left: 5px;
+        }
+
+        @keyframes fadein {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="center-box">
+        <p id="left">It's been </p>
+        <p id="date-since-met"></p>
+        <p id="right"> since we met...</p>
+    </div>
+
+    <script>
+        function countDate(start, className) {
+        
+            var startDate = new Date(start).getTime(), now = new Date().getTime()
+            var distance = now - startDate
+        
+            var days = "<span class='" + className + "'>" + Math.floor(distance / (1000 * 60 * 60 * 24)) + "</span>"
+            var hours = "<span class='" + className + "'>" + Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) + "</span>"
+            var minutes = "<span class='" + className + "'>" + Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)) + "</span>"
+            var seconds = "<span class='" + className + "'>" + Math.floor((distance % (1000 * 60)) / 1000) + "</span>"
+        
+            return result = days + "<span class='days'>days </span>" + hours + "<span class='hours'>hours </span>" + minutes + "<span class='minutes'>minutes </span>" + seconds + "<span class='seconds'>seconds</span>"
+
+        }
+        
+        setInterval(function() {
+            document.getElementById("date-since-met").innerHTML = countDate("2015-06-15", "number")
+        }, 1000)
+            
+    </script>
+</body>
+</html>
+
